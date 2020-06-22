@@ -1,0 +1,224 @@
+{% extends "computer_science/base.html" %}
+
+{% block head %}
+{% endblock head %}
+
+{% block title %}Boolean Algebra{% endblock title %}
+
+{% block body %}
+    <h1>Boolean Algebra</h1>
+    <h2>Symbols</h2>
+    <ul class="bullet_less">
+        <li>AND - ⋀ (Unicode: 2227)</li>
+        <li>OR - ⋁ (Unicode: 2228)</li>
+        <li>NOT - ¬ (Unicode: 00AC)</li>
+        <li>XOR - ⊻ (Unicode: 22BB)</li>
+        <li>NAND - ⊼ (Unicode: 22BC)</li>
+    </ul>
+    <h2>Demorgan's Laws</h2>
+    <h3>First Law</h3>
+    <p>\(¬(A ∨ B) = (¬A ∧ ¬B)\)</p>
+    <table id="law-table-one" class="table_black_border orange_and_yellow" style="width: 500px">
+        <caption>Proof Using Truth Tables</caption>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>¬A</th>
+            <th>¬B</th>
+            <th>A ∨ B</th>
+            <th>¬(A ∨ B)</th>
+            <th>¬A ∧ ¬B</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </table>
+    <h3>Second Law</h3>
+    <p>\(¬(A ∧ B) = (¬A ∨ ¬B)\)</p>
+    <table id="law-table-one" class="table_black_border orange_and_yellow" style="width: 500px">
+        <caption>Proof Using Truth Tables</caption>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>¬A</th>
+            <th>¬B</th>
+            <th>A ∧ B</th>
+            <th>¬(A ∧ B)</th>
+            <th>¬A ∨ ¬B</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </table>
+    <h2>Other Useful Rules</h2>
+    <h3>Commutative</h3>
+    <p>\(X ∧ Y = Y ∧ X\)</p>
+    <p>\(X ∨ Y = Y ∨ X\)</p>
+    <h3>Associative</h3>
+    <p>\(X ∧ (Y ∧ Z) = (X ∧Y) ∧ Z \)</p>
+    <p>\(X ∨ (Y ∨ Z) = (X ∨ Y) ∨ Z\)</p>
+    <h3>Absorption</h3>
+    <p>\(X ∧ (X ∨ Y) = X\)</p>
+    <p>\(X ∨ (X ∧ Y) = X\)</p>
+    <h3>Distributive Rule</h3>
+    <p>\(X ∧ (Y ∨ Z) = (X ∧ Y) ∨ (X ∧ Z)\)</p>
+    <p>\((X ∨ Y) ∧ (W ∨ Z) = (X ∧ W) ∨ (X ∧ Z) ∨ (Y ∧ W) ∨ (Y ∧ Z)\)</p>
+    <h2>Karnaugh Mapping</h2>
+    <p>Karnaugh mapping is analysis to simplify a boolean expression.</p>
+    <p>For the function \(Q = f(A, B), \{A, B, Q: 0, 1\}\)</p>
+    <table class="table_black_border orange_and_yellow" style="width: 150px">
+        <caption>The truth table for this function</caption>
+        <tr>
+            <th>\(A\)</th>
+            <th>\(B\)</th>
+            <th>\(Q\)</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>\(Q_0\)</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>\(Q_1\)</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>\(Q_2\)</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>\(Q_3\)</td>
+        </tr>
+    </table>
+    <p>This can be turned into a Karnaugh map in the form of:</p>
+    <table class="table_black_border orange_and_yellow" style="width: 100px">
+        <tr>
+            <th></th>
+            <th>\(B\)</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th>\(A\)</th>
+            <td></td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>0</td>
+            <td>\(Q_0\)</td>
+            <td>\(Q_1\)</td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>1</td>
+            <td>\(Q_2\)</td>
+            <td>\(Q_3\)</td>
+        </tr>
+    </table>
+    <p>
+        By grouping the \(Qs\) that have a value of 1 or True into groups that are consecutively adjacent, are in
+        powers of 2 and the largest possible group that can be made we can find out the most simple boolean expression.
+    </p>
+    <div class="example">
+        <p>Example of a karnaugh that would result in \(Q = ¬A ∨ ¬B\)</p>
+        <table class="table_black_border orange_and_yellow" style="width: 100px">
+            <tr>
+                <th></th>
+                <th>\(B\)</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>\(A\)</th>
+                <td></td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+        </table>
+        <p>It is important to note that the groups in powers of 2 can overlap.</p>
+    </div>
+{% endblock body %}

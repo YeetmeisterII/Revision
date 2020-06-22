@@ -1,0 +1,149 @@
+/* TODO: Fix the local navigation to auto scroll down if the block of links is off screen. */
+
+/**/
+/* Navigation Styling */
+/**/
+
+.link_button {
+    position: relative;
+    background: rgba(0, 0, 0, 0);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* Global Navigation */
+.nav_global {
+    top: 0;
+    position: fixed;
+    left: 0;
+    width: 85%;
+    height: 76px;
+    background: lightslategray;
+}
+
+.global_button {
+    display: inline-block;
+    padding: 0;
+    float: left;
+}
+
+.global_button:hover, .global_button:focus {
+    background-color: #29a3b9;
+}
+
+.global_button a {
+    color: blue;
+    padding: 28px 28px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Local Navigation */
+.nav-local {
+    overflow: auto;
+    top: 0;
+    position: fixed;
+    right: 0;
+    width: 15%;
+    height: 100%;
+    background: dimgray;
+}
+
+.local_button {
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+.local_button:hover, .local_button:focus {
+    background-color: #2980B9;
+}
+
+.local_link_grouping {
+    position: relative;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.local_link_list {
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.local_link_list a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-local__dropdown__content a:hover {
+    background-color: #ddd
+}
+
+.show {
+    display: block;
+}
+
+/**/
+/* Body Styling */
+/**/
+body {
+    position: absolute;
+    margin: 80px 0 0 0;
+    padding: 0 0 25px 25px;
+    width: 80%;
+}
+
+ul.bullet_less {
+    list-style-type: none;
+}
+
+/**/
+/* Table Styling */
+/**/
+.table_black_border {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.table_black_border th,.table_black_border td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    table-layout: fixed;
+}
+
+th, td {
+    text-align: center;
+}
+
+.orange_and_yellow tr:nth-child(even) {
+    background-color: #f3b579;
+}
+
+.orange_and_yellow tr:nth-child(odd) {
+    background-color: #fff78c;
+}
+
+/**/
+/* Special Divs */
+/**/
+.row {
+    display: flex;
+}
+
+.column {
+    flex: auto;
+}

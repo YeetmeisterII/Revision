@@ -1,0 +1,42 @@
+{% extends "computer_science/base.html" %}
+
+{% block title %}Sorting Algorithms{% endblock title %}
+
+{% block body %}
+    <h1>Sorting Algorithms</h1>
+    <h2>Insertion Sort</h2>
+    <p></p>
+    <h2>Bubble Sort</h2>
+    <p>Starting with the first and second number.</p>
+    <p>If they're in the right order, do nothing. If the order is wrong, swap them and record that you made a swap.</p>
+    <p>Then move on to the second and third numbers.</p>
+    <p>Repeat the previous two actions until the end of the list.</p>
+    <p>If the number of swaps is not 0, repeat the iteration over the whole list.</p>
+    <p>When the number of swaps is 0 after an iteration over the list it is sorted.</p>
+    <h2>Merge Sort</h2>
+    <p>Split a list of \(N\) items into \(N\) lists of \(1\) item.</p>
+    <p>
+        Take the first two lists and merge them with the lowest value being placed first and the higher of the two being
+        placed second.
+    </p>
+    <p>Repeat this for each pair of lists with one item until you only have lists with two items.</p>
+    <p>
+        For each pair of lists with two items in them. Compare the first item in each list and add it to the next
+        list.
+    </p>
+    <p>
+        Compare the first item in the two lists again (It's important to note that one of the lists will have one item
+        in it at this point).
+    </p>
+    <p>Do this until all 4 items are in the new list.</p>
+    <p>Repeat the process building up longer and longer lists until you have a list of the original length.</p>
+    <h2>Quick Sort (Computer Science Implementation)</h2>
+    <ol class="instruction">
+        <li>Pick a random number to be the pivot</li>
+        <li>A pointer on the left looks for the first value that is greater than or equal to the pivot</li>
+        <li>A pointer on the right looks for the first value that is less than the pivot</li>
+        <li>
+            If both pointers are on the pivot then you have found the pivot's final position, else
+        </li>
+    </ol>
+{% endblock body %}

@@ -1,0 +1,52 @@
+{% extends "computer_science/base.html" %}
+
+{% block title %}Programming Techniques{% endblock title %}
+
+{% block body %}
+    <h1>Programming Techniques</h1>
+    <h2>Object Oriented Programming</h2>
+    <p>
+        Object Oriented Languages are based on creating classes that define the attributes and behaviours for objects.
+        Having an object means that all the data in a given objects says within itself, preventing the different parts
+        of the object from being spread around your code or data that should be protected from being accessed. This
+        conforms to the concept of <a href="{% url 'computer_science:glossary' %}#encapsulation" class="glossary_link">
+        encapsulation</a>.
+    </p>
+    <div class="row" style="width: 50%;">
+        <div class="column">
+            <p>Pros</p>
+            <ul>
+                <li>Due to modular coupling different parts of a project can be worked on separately.</li>
+                <li>The classes are often reusable.</li>
+                <li>The code can be easier to maintain due to a centralised coding base.</li>
+            </ul>
+        </div>
+        <div class="column">
+            <p>Cons</p>
+            <ul>
+                <li>Can be more CPU intensive than other alternatives.</li>
+                <li>Can lead to bloated code.</li>
+            </ul>
+        </div>
+    </div>
+    <h3>Classes</h3>
+    <p>Classes are where we define the attributes and behaviours of a group of objects (known as the class).</p>
+    <p>We can instantiate a class to create an instance of it, which is an object.</p>
+    <p>When a function is created inside of a class it is known as a method of the class.</p>
+    <h3>The Constructor</h3>
+    <p>
+        The constructor is the first method of the class that is automatically run when a new instance of the class is
+        created. These usually take some form of parameters that affect the running of the object.
+    </p>
+    <h3>Inheritance</h3>
+    <p>
+        Some classes are best written as Subclasses of a bigger class. A subclass inherits all of the attributes and
+        methods of the Superclass it is derived from. A subclass can implement its own specific methods.
+    </p>
+    <h4>Polymorphism</h4>
+    <p>
+        A form of inheritance in which the methods of the superclass are overwritten. The Superclass is therefore
+        sometimes abstract where the definitions for methods are there but they are empty and are expected to be
+        overwritten in the subclass.
+    </p>
+{% endblock body %}

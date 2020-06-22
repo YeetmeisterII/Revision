@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'pages/style.css' %}">
+    <script type="text/javascript" src="{% static 'pages/java_script/base.js' %}"></script>
+    <meta charset="UTF-8">
+    <title>{% block title %}Placeholder Title{% endblock title %}</title>
+    {% block head_data %}
+    {% endblock head_data %}
+</head>
+
+<body>
+{% block body %}
+
+{% endblock body %}
+</body>
+
+<nav class="nav_global">
+    {% for dict in global_links %}
+        <button class="link_button global_button">
+            <a href="{{ dict.link }}">{{ dict.name }}</a>
+        </button>
+    {% endfor %}
+</nav>
+
+{% block local %}
+    <nav class="nav-local">
+    </nav>
+{% endblock local %}
+
+
+</html>

@@ -1,0 +1,28 @@
+{% extends "computer_science/base.html" %}
+
+{% block title %}Analysis, Design and Comparison{% endblock title %}
+
+{% block body %}
+    <h1>Analysis, Design and Comparison</h1>
+    <h2>Big O Notation</h2>
+    <p>A method for expressing the complexity of an algorithm.</p>
+    <p>We can represent this by the notation of \(O(X)\) where \(X\) is some variation of \(N\) such as \(N^2\).</p>
+    <h3>Calculating Big-O Based on Algorithm</h3>
+    <ol class="instruction">
+        <li>
+            To calculate the Big-O for a whole algorithm, break down the time complexity for all the smaller parts of
+            the
+            algorithm
+        </li>
+        <li>
+            Add all the smaller parts together. If processes occurs within a larger process, add them together and then
+            multiply them by the complexity of the larger process
+        </li>
+    </ol>
+    <div class="examples"></div>
+
+    {#    <p>#}
+    {#        If the number of operations remains constant regardless of the number of things we're operating on, then it's#}
+    {#        constant O(1).#}
+    {#    </p>#}
+{% endblock body %}
