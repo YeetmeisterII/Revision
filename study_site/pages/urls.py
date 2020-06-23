@@ -16,10 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from . import views
+
+app_name = "pages"
 urlpatterns = [
-    path('admin/', admin.site.urls, name='admin'),
-    path('physics/', include('physics.urls')),
-    path('maths/', include('maths.urls')),
-    path('computer_science/', include('computer_science.urls')),
-    path('', include('pages.urls'))
+    path('', views.IndexView.as_view(), name='index'),
 ]

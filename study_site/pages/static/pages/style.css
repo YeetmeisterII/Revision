@@ -19,7 +19,7 @@
     top: 0;
     position: fixed;
     left: 0;
-    width: 85%;
+    width: 100%;
     height: 76px;
     background: lightslategray;
 }
@@ -116,7 +116,7 @@ ul.bullet_less {
     border-collapse: collapse;
 }
 
-.table_black_border th,.table_black_border td {
+.table_black_border th, .table_black_border td {
     border: 1px solid black;
     border-collapse: collapse;
 }
@@ -146,4 +146,11 @@ th, td {
 
 .column {
     flex: auto;
+}
+
+/**/
+/* Lists */
+/**/
+.instruction li {
+    color: grey;
 }
