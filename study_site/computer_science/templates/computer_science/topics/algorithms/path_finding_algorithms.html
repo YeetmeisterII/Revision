@@ -4,13 +4,29 @@
 
 {% block body %}
     <h1>Path Finding Algorithms</h1>
-    <h2>Dijksta's Algorithm</h2>
+    <h2>Dijkstra's Algorithm</h2>
     <p>A shortest path algorithm.</p>
     <p>
-        Will always find the shortest path between two points on a network, not the most efficient method but works with
-        a certainty.
+        Will always find the shortest path between two points on a network, it is not the most efficient method of path
+        finding but will always find the shortest path with certainty.
     </p>
     <ol class="instruction">
-        <li></li>
+        <li>Pick an starting node and ending node</li>
+        <li>
+            Assume all nodes except from the ending node have a distance of infinity from the ending node, the ending
+            node has a distance of zero from the ending node
+        </li>
+        <li>Now pick the node \(N\) with the lowest distance from the starting node</li>
+        <li>
+            Look at a node around it, call it \(M\). If the shortest route of \(N\) plus the distance of edge \(MN\)
+            is less than the shortest route of \(M\), set \(M\)'s shortest route equal to it
+        </li>
+        <li>Repeat this process for every node connected to \(N\)</li>
+        <li>
+            Once you have done this mark off \(N\) as visited and repeat the process of picking the node with lowest
+            distance from the ending node, however exclude nodes marked off as visited from being pick or having it's
+            edges checked when looking at the nodes around a node being visited
+        </li>
+        <li>Repeat the process until you have visited the ending node</li>
     </ol>
 {% endblock body %}
