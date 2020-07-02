@@ -7,9 +7,10 @@ from django.urls import reverse
 @lru_cache
 def links():
     context = [
+        ['Main', 'pages:index'],
         ['Physics', 'physics:index'],
         ['Maths', 'maths:index'],
-        ['Computer Science', 'computer_science:index']
+        ['Computer Science', 'computer_science:index'],
     ]
     return {'global_links': list(map(lambda data: get_name_and_link(*data), context))}
 

@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
     <link rel="stylesheet" type="text/css" href="{% static 'pages/style.css' %}">
@@ -17,13 +17,16 @@
 {% endblock body %}
 </body>
 
-<nav class="nav_global">
-    {% for dict in global_links %}
-        <button class="link_button global_button">
-            <a href="{{ dict.link }}">{{ dict.name }}</a>
-        </button>
-    {% endfor %}
-</nav>
+{% block global %}
+    <nav class="nav_global">
+        {% for dict in global_links %}
+            <button class="link_button global_button">
+                <a href="{{ dict.link }}">{{ dict.name }}</a>
+            </button>
+        {% endfor %}
+    </nav>
+{% endblock global %}
+
 
 {% block local %}
     <nav class="nav-local">

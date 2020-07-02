@@ -21,4 +21,5 @@ urlpatterns = [
     path('physics/', include('physics.urls')),
     path('maths/', include('maths.urls')),
     path('computer_science/', include('computer_science.urls')),
+    path('', include('pages.urls'))
 ]
