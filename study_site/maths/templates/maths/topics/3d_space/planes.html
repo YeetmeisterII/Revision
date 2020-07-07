@@ -1,0 +1,16 @@
+{% extends "maths/base.html" %}
+
+{% block title %}Planes{% endblock title %}
+
+{% block body %}
+    <h1>Planes</h1>
+    <h2>Vector Equation of a Plane</h2>
+    <p>If we have three points on the plane \(\vec{a}, \vec{b}, \vec{c}\)</p>
+    <p>
+        We can find the equation of the plane \(\textbf{r}\) = position on plane + \(\lambda\)direction on plane +
+        \(\mu\)direction on plane not parallel to previous direction.
+    </p>
+    <p>\(\Rightarrow \textbf{r} = \vec{a} + \lambda \vec{ab} + \mu{ac}\)</p>
+    <h2>Equation Using Normal Vector</h2>
+    <p>\(\textbf{r} \cdot \textbf{n} = \textbf{n} \cdot \textbf{a}\)</p>
+{% endblock body %}

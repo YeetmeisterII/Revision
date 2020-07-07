@@ -9,23 +9,23 @@ class TestChrome(TestCase):
     #  maths index pages
     @classmethod
     def setUpClass(cls):
-        driver_path = f'{os.getcwd()}/study_site/selenium_drivers/chromedriver'
+        driver_path = f"{os.getcwd()}/study_site/selenium_drivers/chromedriver"
         cls.driver = webdriver.Chrome(driver_path)
 
     def test_global_link_to_maths(self):
         self.driver.get("http://localhost:8000/physics/")
-        self.driver.find_element_by_link_text('Maths').click()
-        self.assertEqual(self.driver.title, 'Maths Index')
+        self.driver.find_element_by_link_text("Maths").click()
+        self.assertEqual(self.driver.title, "Maths Index")
 
     def test_global_link_to_physics(self):
         self.driver.get("http://localhost:8000/maths/")
-        self.driver.find_element_by_link_text('Physics').click()
-        self.assertEqual(self.driver.title, 'Physics Index')
+        self.driver.find_element_by_link_text("Physics").click()
+        self.assertEqual(self.driver.title, "Physics Index")
 
     def test_global_link_to_computer_science(self):
         self.driver.get("http://localhost:8000/physics/")
-        self.driver.find_element_by_link_text('Computer Science').click()
-        self.assertEqual(self.driver.title, 'Computer Science Index')
+        self.driver.find_element_by_link_text("Computer Science").click()
+        self.assertEqual(self.driver.title, "Computer Science Index")
 
     @classmethod
     def tearDownClass(cls):

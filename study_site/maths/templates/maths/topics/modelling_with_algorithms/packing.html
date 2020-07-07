@@ -1,0 +1,21 @@
+{% extends "maths/base.html" %}
+
+{% block title %}Packing{% endblock title %}
+
+{% block body %}
+    <h1>Packing</h1>
+    <p>
+        Packing is a non-trivial problem that is attempting to fit object of various "weights" into bins that have a
+        maximum amount of "weight" they can store.
+    </p>
+    <h2>First Fit</h2>
+    <ol class="instruction">
+        <li>Take the first object in the list and place it into the first bin that can it can be fit into</li>
+        <li>Repeat this process with the next objects in the list until all items are in a bin</li>
+    </ol>
+    <h2>First Fit Decreasing</h2>
+    <ol class="instruction">
+        <li>Sort the list into decreasing order</li>
+        <li>Now perform the first fit method upon the sorted list</li>
+    </ol>
+{% endblock body %}
