@@ -2,4 +2,29 @@
 
 {% block title %}Ideal Gases{% endblock title %}
 
-{% block body %}<h1>Ideal Gases</h1>{% endblock body %}
+{% block body %}
+    <h1>Ideal Gases</h1>
+    <h2>What is an Ideal Gas?</h2>
+    <p>There are no forces between the molecules so the potential energy of the gas is zero.</p>
+    <p>Any collisions are elastic (Newtonian).</p>
+    <p>This means the internal energy is only the kinetic energy of the molecules.</p>
+    <h2>Particle in a Box</h2>
+    <p>
+        A particle with mass \(m\) moving with velocity \(C_X\) bouncing perpendicular to the wall of a cube with length
+        \(L\) it's frequency upon that wall is \(\frac{C_X}{2L}\)
+    </p>
+    <p>The momentum change for one collision will be \(\Delta p_x = 2 m C_x\)</p>
+    <p>\(\Rightarrow \Delta p_{TOTAL} = 2 m C_x \times \frac{C_x}{2L}\)</p>
+    <p>\(\Rightarrow \Delta p_{TOTAL} = \frac{m C_x^2}{L}\)</p>
+    <h3>Generalise</h3>
+    <p>The box has \(N\) molecules.</p>
+    <p> The molecules can move equally in the \(X, Y, Z\) directions</p>
+    <p>\(\Rightarrow C_x = C_y = C_z\)</p>
+    <p>For N molecules in 3 dimensions</p>
+    <p>\(F = \frac{1}{3} \frac{N m C^2}{L}\)</p>
+    <p>In the cube with lengths \(L\) we can ascertain pressure to be</p>
+    <p>\(P = \frac{F}{A} = \frac{1}{3} \frac{N m C^2}{L} \div L^2 = \frac{1}{3} \frac{N m C^2}{L^3}\)</p>
+    <p>\(V = L^3\), where V is the volume of the cube therefore we can simplify the problem</p>
+    <p>\(P = \frac{1}{3} \frac{N m C^2}{V}\)</p>
+    <p>We can put this into the more useful form \(PV = \frac{1}{3} N m C^2\)</p>
+{% endblock body %}
