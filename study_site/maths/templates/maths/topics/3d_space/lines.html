@@ -1,0 +1,48 @@
+{% extends "maths/base.html" %}
+
+{% block title %}Lines{% endblock title %}
+
+{% block body %}
+    <h1>Lines</h1>
+    <h2>Vector Equation of a Line in 3D Space</h2>
+    <p>To express a general point on the line, we give a point on the line and a direction.</p>
+    <p>For position vectors \(\textbf{a}\) and \(\textbf{b}\)</p>
+    <p>\(\underline{\textbf{r}} = \textbf{a} + \lambda \vec{AB}\)</p>
+    <h2>Converting to Cartesian Equation</h2>
+    <p>Here is a demonstration on converting \(\underline{\textbf{r}}\) to a cartesian equation.</p>
+    <div class="example">
+        <p>Example:</p>
+        <ul>
+            <li>If \(\textbf{a} = i + 2j + 3k\) and \(\textbf{b} = 0i + j + 2k\)</li>
+            <li>
+                Then the equation of the line is \(\underline{\textbf{r}} = \textbf{a} + \lambda \vec{\textbf{ab}}\)
+            </li>
+            <li>Which gives us \(\textbf{r} = (i + 2j + 3k) + \lambda (-i - j - 2k)\)</li>
+            <li>We can put this in the form \(\underline{\textbf{r}} = xi + yj + zk\)</li>
+            <li>\(\Rightarrow x = 1 - \lambda,\space y = 2 - \lambda,\space z = 3 - 2\lambda\)</li>
+            <li>\(\Rightarrow \lambda = 1 - x, \lambda = 2 - y, \lambda = \frac{3 - z}{2}\)</li>
+            <li>\(\Rightarrow 1 - x = 2 - y = \frac{3 - z}{2}\)</li>
+        </ul>
+    </div>
+    <h2>Intersecting Lines in 3D Space</h2>
+    <p>Two lines in 3D space have 3 possible states.</p>
+    <ol>
+        <li>They"re parallel and never touch or touch at infinitely many point</li>
+        <li>They intersect at a point</li>
+        <li>They are in skew which means they meet at no points</li>
+    </ol>
+    <div class="example">
+        <p>Example:</p>
+        <ul>
+            <li>\(\underline{\textbf{r}}_1 = (i + 3j + 0k) + \lambda (0i + j - k)\)</li>
+            <li>\(\underline{\textbf{r}}_2 = (2i + j + 3k) + \mu (i + 0j + k)\)</li>
+            <li>For these two lines to cross this statement must be true</li>
+            <li>\(x_1 = x_2 \cap y_1 = y_2 \cap z_1 = z_2\)</li>
+            <li>This leads to</li>
+            <li>\(1 = 2 + \mu \Rightarrow \mu = -1\)</li>
+            <li>\(3 + \lambda = 1 \Rightarrow \lambda = -2\)</li>
+            <li>\(-\lambda = 3 + \mu \Rightarrow -(-2) = 3 + (-1) \Rightarrow 2 = 2\)</li>
+            <li>Therefore the lines cross because the solutions are consistent</li>
+        </ul>
+    </div>
+{% endblock body %}

@@ -16,8 +16,13 @@ def create_topic_and_pages(name: str, subject: str, page_dicts: List[Dict[str, s
     """
     dir_name = _path_legal_name(name) if dir_name is None else dir_name
     hook_dictionaries = [create_topic_page(dir_name=dir_name, subject=subject, **page_dict) for page_dict in page_dicts]
-    link_data = ''.join(hook_dictionaries)
-    topic_dictionary = "{\n'topic_name': '%s',\n'link_data': [\n%s\n]\n}," % (name, link_data)
+    link_data = "".join(hook_dictionaries)
+    topic_dictionary = "{\n"
+    topic_name
+    ": " % s
+    ",\n"
+    link_data
+    ": [\n%s\n]\n}," % (name, link_data)
     return topic_dictionary
 
 
@@ -34,18 +39,28 @@ def create_topic_page(dir_name: str, subject: str, name: str, file_name: str = N
     get the link for the page.
     """
     file_name = _path_legal_name(name) if file_name is None else file_name
-    file_directory = os.path.join(os.getcwd(), subject, 'templates', subject, 'topics', dir_name)
+    file_directory = os.path.join(os.getcwd(), subject, "templates", subject, "topics", dir_name)
     file_content = _topic_page_content(name, subject)
 
     if not os.path.exists(file_directory):
         os.mkdir(file_directory)
-        print(f'Created new directory {file_directory}')
+        print(f"Created new directory {file_directory}")
 
-    with open(os.path.join(file_directory, f'{file_name}.html'), 'w') as f:
+    with open(os.path.join(file_directory, f"{file_name}.html"), "w") as f:
         f.write(file_content)
-        print(f'Created {file_name}.html')
+        print(f"Created {file_name}.html")
 
-    return "{'name': '%s', 'viewname': '%s:topic_page', 'args': ['%s', '%s']}," % (name, subject, dir_name, file_name)
+    return "{"
+    name
+    ": " % s
+    ", "
+    viewname
+    ": " % s: topic_page
+    ", "
+    args
+    ": [" % s
+    ", " % s
+    "]}," % (name, subject, dir_name, file_name)
 
 
 def _topic_page_content(name: str, subject: str) -> str:
@@ -55,7 +70,8 @@ def _topic_page_content(name: str, subject: str) -> str:
     :param subject: App the created pages are being placed in.
     :return: String of text.
     """
-    line1 = '{% extends "' + subject + '/base.html" %}\n\n'
+    line1 = "{% extends "" + subject + " / base.html
+    " %}\n\n"
     line2 = "{% block title %}" + name + "{% endblock title %}\n\n"
     line3 = "{% block body %}<h1>" + name + "</h1>{% endblock body %}\n"
 
@@ -71,7 +87,7 @@ def _path_legal_name(string: str) -> str:
     """
     string = string.lower()
     # Replaces all spaces with an underscore.
-    string = re.sub(r'\s', '_', string)
+    string = re.sub(r"\s", "_", string)
     # Removes all characters that are NOT an alphabetical character or an underscore.
-    string = re.sub(r'[^a-z_]', '', string)
+    string = re.sub(r"[^a-z_]", "", string)
     return string

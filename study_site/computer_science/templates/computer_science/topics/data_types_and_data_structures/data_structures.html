@@ -2,4 +2,25 @@
 
 {% block title %}Data Structures{% endblock title %}
 
-{% block body %}<h1>Data Structures</h1>{% endblock body %}
+{% block body %}
+    <h1>Data Structures</h1>
+    <h2>Linked Lists</h2>
+    <ul>
+        <li>Similar to lists</li>
+        <li>Each item has data and a pointer</li>
+    </ul>
+    <h2>Tree</h2>
+    <ul>
+        <li>Used to represent heirearchical data</li>
+        <li>Each node is connected to other nodes</li>
+        <li>Nodes with no children are leaves</li>
+        <li>Nodes with no parents are roots</li>
+    </ul>
+    <h3>Binary Trees</h3>
+    <p>The same as a regular tree but can only have up to two children.</p>
+    <h3>Traversal</h3>
+    <h4>Depth First Search</h4>
+    <p>Travel down the left hand path until you reach a leaf</p>
+    <p>Then head back up the hierarchical structure until you can go down down the tree again.</p>
+
+{% endblock body %}
