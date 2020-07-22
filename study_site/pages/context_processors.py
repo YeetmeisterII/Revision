@@ -11,6 +11,7 @@ def links():
         ["Physics", "physics:index"],
         ["Maths", "maths:index"],
         ["Computer Science", "computer_science:index"],
+        ["Business", "business:index"],
     ]
     return {"global_links": list(map(lambda data: get_name_and_link(*data), context))}
 
