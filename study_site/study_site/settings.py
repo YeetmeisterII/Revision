@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-secret_key_path = os.path.join(os.getcwd(), "..", "secret_key.txt")
+secret_key_path = os.path.join(os.path.join(os.path.split(__file__)[0], "secret_key.txt"))
 with open(secret_key_path) as f:
     SECRET_KEY = f.read()
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'maths.apps.MathsConfig',
     'computer_science.apps.ComputerScienceConfig',
+    'business.apps.BusinessConfig',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +70,8 @@ TEMPLATES = [
                 'pages.context_processors.get_global_app_links',
                 'physics.context_processors.physics_links',
                 'computer_science.context_processors.computer_science_links',
-                'maths.context_processors.maths_links'
+                'maths.context_processors.maths_links',
+                'business.context_processors.business_links',
             ],
         },
     },

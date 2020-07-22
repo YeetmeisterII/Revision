@@ -1,0 +1,25 @@
+{% extends 'pages/base.html' %}
+
+{% block head_data %}
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    {% block head %}{% endblock head %}
+{% endblock head_data %}
+
+{% block local %}
+    <nav class="nav-local">
+        {% for topic in business_links %}
+            <div class="local_link_grouping">
+                <button id="nav_local_button_{{ forloop.counter }}"
+                        onclick="localDropdown({{ forloop.counter }})"
+                        class="link_button local_button">
+                    {{ topic.topic_name }}
+                </button>
+                <div id="nav_local_content_{{ forloop.counter }}" class="local_link_list hidden">
+                    {% for link_pair in topic.link_pairs %}
+                        <a href={{ link_pair.link }}>{{ link_pair.name }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </nav>
+{% endblock local %}
