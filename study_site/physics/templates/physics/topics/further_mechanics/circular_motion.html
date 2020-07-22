@@ -2,4 +2,19 @@
 
 {% block title %}Circular Motion{% endblock title %}
 
-{% block body %}<h1>Circular Motion</h1>{% endblock body %}
+{% block body %}
+    <h1>Circular Motion</h1>
+    <p>To have circular motion an object must have a force.</p>
+    <h2>Describing Acceleration in a Circle</h2>
+    <p>Define the circle by the parametric equations \(s_x = rcos(wt)\) & \(s_y = rsin(wt)\)</p>
+    <p>\(\Rightarrow \frac{ds_x}{dt} = -rwsin(wt)\)</p>
+    <p>\(\Rightarrow \frac{ds_y}{dt} = rwcos(wt)\)</p>
+    <p>\(\Rightarrow \frac{d^2 s_x}{dt^2} = -r w^2 cos(wt) = a_x\)</p>
+    <p>\(\Rightarrow \frac{d^2 s_y}{dt^2} = -r w^2 sin(wt) = a_y\)</p>
+    <p>\(a_t = \sqrt{a^2_x + a^2_y}\)</p>
+    <p>\(\Rightarrow a_t = \sqrt{(-r w^2 cos(wt))^2 + (-r w^2 sin(wt))^2}\)</p>
+    <p>\(\Rightarrow a_t = \sqrt{r^2 w^4 cos^2(wt) + r^2 w^4 sin^2(wt)}\)</p>
+    <p>\(\Rightarrow a_t = \sqrt{r^2 w^4(cos^2(wt) + sin^2(wt))}\)</p>
+    <p>\(\Rightarrow a_t = \sqrt{r^2 w^4(1)}\)</p>
+    <p>\(\Rightarrow a_t = r w^2\)</p>
+{% endblock body %}

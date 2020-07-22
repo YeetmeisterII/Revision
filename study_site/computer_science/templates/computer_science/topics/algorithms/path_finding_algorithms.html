@@ -4,7 +4,7 @@
 
 {% block body %}
     <h1>Path Finding Algorithms</h1>
-    <h2>Dijkstra's Algorithm</h2>
+    <h2>Dijkstra"s Algorithm</h2>
     <p>A shortest path algorithm.</p>
     <p>
         Will always find the shortest path between two points on a network, it is not the most efficient method of path
@@ -19,14 +19,23 @@
         <li>Now pick the node \(N\) with the lowest distance from the starting node</li>
         <li>
             Look at a node around it, call it \(M\). If the shortest route of \(N\) plus the distance of edge \(MN\)
-            is less than the shortest route of \(M\), set \(M\)'s shortest route equal to it
+            is less than the shortest route of \(M\), set \(M\)"s shortest route equal to it
         </li>
         <li>Repeat this process for every node connected to \(N\)</li>
         <li>
             Once you have done this mark off \(N\) as visited and repeat the process of picking the node with lowest
-            distance from the ending node, however exclude nodes marked off as visited from being pick or having it's
+            distance from the ending node, however exclude nodes marked off as visited from being pick or having it"s
             edges checked when looking at the nodes around a node being visited
         </li>
         <li>Repeat the process until you have visited the ending node</li>
+    </ol>
+    <h2>A* Algorithm</h2>
+    <p>
+        A variation of Dijkstra"s algorithm that uses a heuristic weighting to help reduce the amount of searching but
+        will still find the shortest path with certainty.
+    </p>
+    <ol class="instruction">
+        <li>Begin at the start node and make it the current node</li>
+        <li></li>
     </ol>
 {% endblock body %}

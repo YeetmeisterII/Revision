@@ -1,0 +1,27 @@
+{% extends "maths/base.html" %}
+
+{% block title %}Working With Graphs{% endblock title %}
+
+{% block body %}
+    <h1>Graphs</h1>
+    <h2>Terminology</h2>
+    <h3>Graph</h3>
+    <p>A graph is a set of nodes (vertices) together with a set of arcs (edges).</p>
+    <h3>Loop</h3>
+    <p>An edge with the same vertex at both ends.</p>
+    <h3>Simple Graph</h3>
+    <p>A graph with no loops and no repeated edges.</p>
+    <h3>Connected Graph</h3>
+    <p>There must be a direct or indirect path to every other node.</p>
+    <h3>Tree</h3>
+    <p>A graph with the minimum edges used.</p>
+    <h3>Network</h3>
+    <p>A graph with weighted edges.</p>
+    <h3>Incidence Matrix</h3>
+    {# TODO: Add definition. #}
+    <p></p>
+    <h2>Rules of Graphs</h2>
+    <ul>
+        <li>Must have an even number of nodes with odd orders.</li>
+    </ul>
+{% endblock body %}
