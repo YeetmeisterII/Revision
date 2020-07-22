@@ -1,0 +1,23 @@
+{% extends "maths/base.html" %}
+
+{% block title %}Minimum Spanning Tree{% endblock title %}
+
+{% block body %}
+    <h1>Minimum Spanning Tree</h1>
+    <p>
+        A minimum spanning tree is the minimum connected route (the least weight) that includes every node. If a graph
+        has \(N\) nodes then the minimum spanning trees will have \(N - 1\) edges. Two of the algorithms we use to find
+        this tree are Kruskal's and Prim's. Both have quadratic complexity however for large graphs Kruskal's is more
+        efficient.
+    </p>
+    <h2>Kruskal's Algorithm</h2>
+    <ol class="instruction">
+        <li>Select the shortest arc</li>
+        <li>Choose another arc which should not join nodes which are already connected to each other (in some way)</li>
+    </ol>
+    <h2>Prim's Algorithm</h2>
+    <ol class="instruction">
+        <li>Choose a node</li>
+        <li>Build up a series of edges connecting the nearest node to the nodes that are currently connected</li>
+    </ol>
+{% endblock body %}

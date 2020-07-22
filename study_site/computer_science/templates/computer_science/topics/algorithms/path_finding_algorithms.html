@@ -5,7 +5,7 @@
 {% block body %}
     <h1>Path Finding Algorithms</h1>
     <h2>Dijkstra"s Algorithm</h2>
-    <p>A shortest path algorithm.</p>
+    <h3>A shortest path algorithm.</h3>
     <p>
         Will always find the shortest path between two points on a network, it is not the most efficient method of path
         finding but will always find the shortest path with certainty.
@@ -29,6 +29,10 @@
         </li>
         <li>Repeat the process until you have visited the ending node</li>
     </ol>
+    <p>
+        The work involved is approximately proportional to the number of nodes which have not yet been permanently
+        labelled. This is \((n - 1) + (n - 2) + \dot + 3 + 2 + 1 = \frac{n(n - 1)}{2}
+    </p>
     <h2>A* Algorithm</h2>
     <p>
         A variation of Dijkstra"s algorithm that uses a heuristic weighting to help reduce the amount of searching but

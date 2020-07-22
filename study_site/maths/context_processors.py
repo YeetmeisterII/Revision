@@ -270,6 +270,8 @@ def links():
                  "args": ["modelling_with_algorithms", "working_with_graphs"]},
                 {"name": "Packing", "viewname": "maths:topic_page",
                  "args": ["modelling_with_algorithms", "packing"]},
+                {"name": "Minimum Spanning Trees", "viewname": "maths:topic_page",
+                 "args": ["modelling_with_algorithms", "minimum_spanning_trees"]},
             ]
         },
     ]
