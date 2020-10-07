@@ -1,0 +1,73 @@
+{% extends "maths/base.html" %}
+
+{% block title %}Critical Path Analysis{% endblock title %}
+
+{% block body %}
+    <h1>Critical Path Analysis</h1>
+    <h2>Usage</h2>
+    <p>
+        This looks at how we manage a series of activity which may interlink with each other to form a complete task. We
+        want to perform the whole task as quickly as possible.
+    </p>
+    <h2>Activity Network</h2>
+    <p>Activity networks are graphs that display the scope of activities within a task.</p>
+    <ul>
+        <li>The edges represent the activities</li>
+        <li>Activities are lettered</li>
+        <li>The weights are the durations</li>
+        <li>
+            The nodes represent events (moments in time between the completion of an activity and the start of another)
+        </li>
+        <li>The graph is typically read from left to right</li>
+        <li>The network must have a single start event and a single finish event</li>
+    </ul>
+    <h2>Dummy Activities</h2>
+    <ul>
+        <li>A dummy activity has duration zero</li>
+        <li>It is shown using dotted lines</li>
+    </ul>
+    <h2>Identifying a Critical Path</h2>
+    <p>
+        The minimum time in which a project can be completed - assuming no delays - is the minimum project completion
+        time. It is length of the longest path in the activity network. Any activity on the longest path is called a
+        critical activity.
+    </p>
+    <h2>The Algorithm Process</h2>
+    <h3>Forward Pass</h3>
+    <ul>
+        <li>Go in order of the nodes and find the longest time taken to reach said node from the starting node</li>
+        <li>Continue until reaching the ending node</li>
+    </ul>
+    <h3>Backwards Pass</h3>
+    <ul>
+        <li>From the finishing node look at he before it</li>
+        <li>Deduct the shortest length of the shortest path between the nodes</li>
+        <li>Repeat the process until you reach the starting node</li>
+    </ul>
+    <h3>Evaluation</h3>
+    <p>
+        The forward pass finds the longest time an event could take whereas the backwards pass finds the latest time an
+        event could take place, when there is a discrepancy between the two it tells us that the activity is not
+        critical.
+    </p>
+    <h2>Float</h2>
+    <p>
+        Non-critical activities have 'float'. This is the amount of time by which the duration of the activity can be
+        extended without having any effect on the minimum completion time.
+    </p>
+    <p>
+        The float may be divided into independent float (which is unique to this activity) and interfering float (which
+        has an impact on the float of other activities)
+    </p>
+    <p>
+        Float for activity \( (i, j) = \text{ latest event time at } j - \text{ earliest event time at } i -
+        \text{ duration } \)
+    </p>
+    <p>
+        Independent float for \( (i, j) = \text{ earliest event time at } j - \text{ latest event time at } i -
+        \text{ duration } \)
+    </p>
+    <p>
+        \( \text{Interfering float } = \text{ Total float } - \text{ Independent float } \)
+    </p>
+{% endblock body %}

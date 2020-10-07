@@ -1,0 +1,22 @@
+{% extends "maths/base.html" %}
+
+{% block title %}Network Flows{% endblock title %}
+
+{% block body %}
+    <h1>Network Flows</h1>
+    <h2>Usage</h2>
+    <p>
+        When a continuous flow is required, the problem can ve modelled as a network flow. Weights on the arcs show
+        capacities and the maximum continuous flow from start ot finish is required.
+    </p>
+    <h2>Terminology</h2>
+    <ul>
+        <li>There is a source node \( S \), essentially the starting node</li>
+        <li>There is a sink node \( T \), essentially the finishing node</li>
+        <li>
+            A cut is a partition of the set of vertices into two sets (the source and sink must be in different sets)
+        </li>
+    </ul>
+    <h2>Cuts</h2>
+    <p>The capacity of a cut is the sum of all the capacities of the arcs which join the two sets</p>
+{% endblock body %}
