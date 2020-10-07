@@ -70,7 +70,7 @@ TEMPLATES = [
                 "pages.context_processors.get_global_app_links",
                 "physics.context_processors.physics_links",
                 "computer_science.context_processors.computer_science_links",
-                "maths.context_processors.maths_links"                
+                "maths.context_processors.maths_links",
                 "business.context_processors.business_links",
             ],
         },
