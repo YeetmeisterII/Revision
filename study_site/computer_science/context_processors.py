@@ -110,7 +110,15 @@ def links():
                  "args": ["algorithms", "path_finding_algorithms"]},
             ]
         },
-
+        {
+            "topic_name": "Systems Architecture",
+            "link_data": [
+                {"name": "Modes of Address", "viewname": "computer_science:topic_page",
+                 "args": ["systems_architecture", "modes_of_address"]},
+                {"name": "Lexical and Syntax Analysis", "viewname": "computer_science:topic_page",
+                 "args": ["systems_architecture", "lexical_and_syntax_analysis"]},
+            ]
+        },
     ]
 
     return {"computer_science_links": local_link_converter(context)}

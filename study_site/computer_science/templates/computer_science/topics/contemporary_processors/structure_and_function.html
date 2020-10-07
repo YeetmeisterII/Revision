@@ -2,4 +2,41 @@
 
 {% block title %}Structure and Function{% endblock title %}
 
-{% block body %}<h1>Structure and Function</h1>{% endblock body %}
+{% block body %}
+    <h1>Structure and Function</h1>
+    <h2>CPU</h2>
+    <p>Performs most of the calculations for your computer.</p>
+    <ul>
+        <li>Made up of billions of transistors</li>
+        <li>The transistors are arranged together to form logic circuits</li>
+    </ul>
+    <h2>CPU Performance</h2>
+    <ul>
+        <li>Clock Speed - How many times per second the CPU cycles</li>
+        <li>Cache Size - How much "on chip" memory there is</li>
+    </ul>
+    <h2>Parts of the CPU</h2>
+    <ul>
+        <li>ALU - Arithmetic Logic Unit</li>
+        <li>ACC - Accumulator (Register for the ALU)</li>
+        <li>CU - Control Unit</li>
+        <li>MAR - Memory Address Register</li>
+        <li>MDR - Memory Data Register</li>
+        <li>CIR - Current Instruction Register</li>
+        <li>PC - Program Counter</li>
+        <li>CB - Control Bus</li>
+    </ul>
+    <h3>Control Bus</h3>
+    <h4>Interrupts</h4>
+    <p>An interrupt is when a device or program requests access to the CPU, the CPU responds by:</p>
+    <ul>
+        <li>Suspending activities after current cycle</li>
+        <li>Saving the state of the registers</li>
+        <li>Calling the interrupt handler</li>
+    </ul>
+    <h2>Harvard Architecture</h2>
+    <p>
+        By using a different memory for instructions and data the rate of transfer in the buses can be faster by getting
+        the data and instructions simultaneously.
+    </p>
+{% endblock body %}

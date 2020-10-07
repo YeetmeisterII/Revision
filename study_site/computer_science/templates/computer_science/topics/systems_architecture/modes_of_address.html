@@ -1,0 +1,41 @@
+{% extends "computer_science/base.html" %}
+
+{% block title %}
+    Modes of Address
+{% endblock title %}
+
+{% block body %}
+    <h1>Modes of Address</h1>
+    <h2>Immediate Addressing</h2>
+    <ul>
+        <li>This operand is literally the value that is used for the instruction</li>
+        <li>Super fast</li>
+        <li>Nothing needs to be fetched from memory, it's already there to go</li>
+        <li>Limits the range of values which can be used</li>
+        <li>Requires values to be known ahead of time</li>
+    </ul>
+    <h2>Direct Addressing</h2>
+    <ul>
+        <li>The operand is a memory address which points to a location which holds the value to be used</li>
+        <li>Slower than immediate addressing</li>
+        <li>Allows for a greater range of values to be used</li>
+    </ul>
+    <h2>Indirect Addressing</h2>
+    <ul>
+        <li>
+            The operand contains an address which points to a memory location which contains an address which points to
+            another memory location which contains the data
+        </li>
+        <li>Allows access to a greater range of memory addresses</li>
+        <li>Requires twice as many memory accesses as direct addressing</li>
+    </ul>
+    <h2>Indexed Addressing</h2>
+    <p>Indexed addressing requires a new register the IR (Index Register)</p>
+    <ul>
+        <li>The operand is an address to be accessed</li>
+        <li>This value is added to the contents of the index register (this is called the offset)</li>
+        <li>The result is then copied to the MAR and memory is accessed</li>
+        <li>Finally, the index register is incremented</li>
+        <li>In this way, the same command can be used multiple times accessing sequential locations in memory</li>
+    </ul>
+{% endblock body %}

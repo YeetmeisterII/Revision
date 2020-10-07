@@ -2,4 +2,30 @@
 
 {% block title %}Thinking Ahead{% endblock title %}
 
-{% block body %}<h1>Thinking Ahead</h1>{% endblock body %}
+{% block body %}
+    <h1>Thinking Ahead</h1>
+    <h2>Input / Process / Output</h2>
+    <p>All computer systems consist of these three things at a basic level</p>
+    <ul>
+        <li>Input: All data fed into the system for processing.</li>
+        <li>Process: What happens to inputted data.</li>
+        <li>Output: The data and information which is fed out of the system after processing.</li>
+    </ul>
+    <h2>Modular Design</h2>
+    <h3>Advantages</h3>
+    <p>Easier to write and test - the fewer things a program does, the fewer things can go wrong.</p>
+    <p>It is clear from the initial design which parts of the program should interact with each other.</p>
+    <p>
+        Different sections of the program can be assigned to different programming teams - many teams will have
+        expertise in specific areas.
+    </p>
+    <p>
+        Each module performs a specific task - any future programs which need to perform the same task they can be
+        reused.
+    </p>
+    <h3>Problem Decomposition</h3>
+    <p>
+        When you analyse and break down a problem, creating many programs which are each able to handle a single task is
+        easier.
+    </p>
+{% endblock body %}
