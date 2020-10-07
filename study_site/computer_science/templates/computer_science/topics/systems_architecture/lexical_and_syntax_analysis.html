@@ -1,0 +1,44 @@
+{% extends "computer_science/base.html" %}
+
+{% block title %}
+    Lexical and Syntax Analysis
+{% endblock title %}
+
+{% block body %}
+    <h1>Lexical and Syntax Analysis</h1>
+    <h2>Stages of Translation</h2>
+    <ol>
+        <li>Lexical Analysis performed by a lexer</li>
+        <li>Syntax Analysis performed by a parser</li>
+        <li>Semantic Analysis performed by a compiler</li>
+        <li>Optimisation</li>
+        <li>Code generation</li>
+    </ol>
+    <h2>Lexer</h2>
+    <p>Manages the lexical analysis of the code.</p>
+    <ul>
+        <li>Performs TOKENISATION</li>
+        <li>Breaks each line of code into a series of tokens</li>
+        <li>Tokens could be:</li>
+        <li>Identifier</li>
+        <li>Symbol</li>
+        <li>Operator</li>
+        <li>Keyword</li>
+        <li>Separator</li>
+        <li>Literal</li>
+        <li>Comment</li>
+    </ul>
+    <h2>Parser</h2>
+    <p>Manages the syntax analysis of the code</p>
+    <ul>
+        <li>Checks that tokens appear in the correct order.</li>
+    </ul>
+    <p>Note: The parser does not check the datatypes.</p>
+    <h2>Semantic Analysis</h2>
+    <ul>
+        <li>Checks that identifiers are created before they are used.</li>
+    </ul>
+    <h2>Symbol Table</h2>
+    <p>Once everything has been lexed, parsed and analysed, the compiler generates a symbol table.</p>
+    <p>It contains information on the symbols' name, datatype, scope and (sometimes) memory address.</p>
+{% endblock body %}
