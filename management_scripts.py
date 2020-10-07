@@ -17,12 +17,7 @@ def create_topic_and_pages(name: str, subject: str, page_dicts: List[Dict[str, s
     dir_name = _path_legal_name(name) if dir_name is None else dir_name
     hook_dictionaries = [create_topic_page(dir_name=dir_name, subject=subject, **page_dict) for page_dict in page_dicts]
     link_data = "".join(hook_dictionaries)
-    topic_dictionary = "{\n"
-    topic_name
-    ": " % s
-    ",\n"
-    link_data
-    ": [\n%s\n]\n}," % (name, link_data)
+    topic_dictionary = "{\n\"topic_name\": \"%s\",\n\"link_data\": [\n%s\n]\n}," % (name, link_data)
     return topic_dictionary
 
 
@@ -50,17 +45,8 @@ def create_topic_page(dir_name: str, subject: str, name: str, file_name: str = N
         f.write(file_content)
         print(f"Created {file_name}.html")
 
-    return "{"
-    name
-    ": " % s
-    ", "
-    viewname
-    ": " % s: topic_page
-    ", "
-    args
-    ": [" % s
-    ", " % s
-    "]}," % (name, subject, dir_name, file_name)
+    return "{\"name\": \"%s\", \"viewname\": \"%s: topic_page\", \"args\": [\"%s\", \"%s\"]}," % (
+    name, subject, dir_name, file_name)
 
 
 def _topic_page_content(name: str, subject: str) -> str:
@@ -70,11 +56,9 @@ def _topic_page_content(name: str, subject: str) -> str:
     :param subject: App the created pages are being placed in.
     :return: String of text.
     """
-    line1 = "{% extends "" + subject + " / base.html
-    " %}\n\n"
+    line1 = "{% extends \"" + subject + "/base.html\" %}\n\n"
     line2 = "{% block title %}" + name + "{% endblock title %}\n\n"
     line3 = "{% block body %}<h1>" + name + "</h1>{% endblock body %}\n"
-
     return line1 + line2 + line3
 
 

@@ -2,4 +2,26 @@
 
 {% block title %}Systems Software{% endblock title %}
 
-{% block body %}<h1>Systems Software</h1>{% endblock body %}
+{% block body %}
+    <h1>Systems Software</h1>
+    <h2>Assembly Language</h2>
+    <ul>
+        <li>HLT (halt) - Stops program</li>
+        <li>ADD (addition) - Adds data at address to value in accumulator</li>
+        <li>SUB (subtract) - Subtract data at address from value in accumulator</li>
+        <li>LDA (load data) - Loads data from address into the accumulator</li>
+        <li>STA (store accumulator) - Stores data in the accumulator at the memory address</li>
+        <li>BRA (branch always) - Sets program counter to value (branch always)</li>
+        <li>BRZ (branch if zero) - Sets program counter to value if value in accumulator is zero</li>
+        <li>BRP (branch if positive) - Sets program counter to value if value in accumulator is positive</li>
+        <li>INP (input) - Input into accumulator</li>
+        <li>OUT (output) - Output contents of accumulator</li>
+        <li>DAT (data) - Specifies memory addresses used for data</li>
+    </ul>
+    <h2>Addressing</h2>
+    <ul>
+        <li>Immediate Addressing - Using the operand as the data to be passed</li>
+        <li>Direct Addressing - Operand refers to a memory address with data</li>
+        <li>Indirect Addressing - Operand refers to a memory address that itself refers to a memory address of data</li>
+    </ul>
+{% endblock body %}
